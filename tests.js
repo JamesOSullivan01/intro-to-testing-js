@@ -48,5 +48,19 @@ describe("sayHello", function() {
     it("should return 'Hello, World' when an object  is passed to the function", function() {
         expect(sayHello({})).toBe("Hello, World!");
     });
+});
 
+describe("isFive", function() {
+    it("should return a defined function named 'isFive'", function(){
+       expect(typeof isFive).toBe('function');
+    });
+    it("should return true if the number 5 is passed as an argument", function(){
+       expect(isFive(5)).toBe(true);
+    });
+    it("should return false if any number but 5 is passed as an argument", function(){
+       expect(isFive()).toBe(false);
+    });
+    it("should return false if the string of 5 is passed as an argument", function(){
+       expect(isFive("5")).toBe(false);
+    });
 });
