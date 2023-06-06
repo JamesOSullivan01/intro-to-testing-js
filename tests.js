@@ -64,3 +64,30 @@ describe("isFive", function() {
        expect(isFive("5")).toBe(false);
     });
 });
+
+describe("isEven", function() {
+    it("should return a defined function named 'isEven'", function() {
+        expect(typeof isEven).toBe('function');
+    });
+    it("should return true if the number passed as an argument is even", function() {
+        expect(isEven(10)).toBe(true);
+    });
+    it("should return false if the number passed as an argument is odd", function() {
+        expect(isEven(9)).toBe(false);
+    });
+    it("should return false if anything but a number is passed as an argument", function() {
+        expect(isEven("Banana")).toBe(false);
+    });
+    it("should return false if a 'boolean' passed as an argument", function() {
+        expect(isEven('boolean')).toBe(false);
+    });
+    it("should return false if an empty string is passed as an argument", function() {
+        expect(isEven('')).toBe(false);
+    });
+    it("should return false if no argument is passed", function() {
+        expect(isEven()).toBe(false);
+    });
+    it("should return false if 'Infinity' is passed as an argument", function() {
+        expect(isEven(Infinity)).toBe(false);
+    });
+});

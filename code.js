@@ -31,5 +31,16 @@ function isFive (number){
     }
 };
 
+function isEven(num) {
+    if (typeof num === 'boolean') {
+        return false;
+    } else if (num === "") {
+        return false
+    } else if (num % 2 === 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
 
 
